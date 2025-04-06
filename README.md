@@ -10,13 +10,28 @@ The primary goal of this project was to build a foundational, isolated virtual l
 * **Host Operating System:** Windows 11
 * **Virtual Machines:**
     * Kali Linux [Official VirtualBox Image 2025.1](https://www.kali.org/docs/virtualization/import-premade-virtualbox/)
-    * Metasploitable 2 [(Official download)](https://docs.rapid7.com/metasploit/metasploitable-2/)
+    * Metasploitable 2 [Official download](https://docs.rapid7.com/metasploit/metasploitable-2/)
     * Ubuntu Server 24.04.2 LTS [Official download](https://ubuntu.com/download/server)
 ## Lab Architecture
 
 ### Network Diagram
 
-*( **TODO:** Create a network diagram using diagrams.net or similar, showing the Host, VirtualBox, CyberLabNet, Kali VM, and Metasploitable 2 VM with their IP range. Upload the image file (e.g., `lab_diagram.png`) to this GitHub repository and replace this text with the link: `![Lab Network Diagram](lab_diagram.png)`)*
+![Lab Network Diagram](images/network_diag.png)
 
-Example Placeholder:
-![Lab Network Diagram](placeholder_diagram.png)
+## Setup Process Summary
+
+1.  Configured `CyberLabNet` NAT Network in VirtualBox Global Tools.
+2.  Imported the official Kali Linux VirtualBox image.
+3.  Changed default Kali credentials and fully updated the system.
+4.  Created a new VM shell for Metasploitable 2 (Linux/Ubuntu 32-bit).
+5.  Attached the downloaded Metasploitable 2 `.vmdk` as the existing hard disk.
+6.  Configured network adapters for both VMs to use `CyberLabNet`.
+7.  Adjusted RAM and vCPU allocation for performance.
+
+## Verification
+
+* Successfully booted both Kali Linux (graphical interface) and Metasploitable 2 (command-line interface).
+* Confirmed both VMs received IP addresses within the `10.0.2.0/24` range from `CyberLabNet`.
+* Verified network connectivity between Kali and Metasploitable 2 using `ping 10.0.2.7` from the Kali terminal.
+
+
