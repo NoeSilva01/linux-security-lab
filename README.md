@@ -18,6 +18,27 @@ The primary goal of this project was to build a foundational, isolated virtual l
 
 ![Lab Network Diagram](images/network_diag.png)
 
+## Virtual Machines
+
+### Kali Linux (Attacker)
+* **Purpose:** Attacker machine for running security scans and tools.
+
+![Kali](images/kali_64.png)
+
+### Metasploitable 2 (Target)
+
+* **Purpose:** Intentionally vulnerable target machine for practice.
+
+![Metasploitable 2](images/meta_2.png)
+
+* **Notes:** Created new VM in VirtualBox and attached existing .vmdk. Boots to command line as expected.
+
+
+## CyberLabNet
+
+![CyberLabNet](images/CyberLabNet.png)
+
+
 ## Setup Process Summary
 
 1.  Configured `CyberLabNet` NAT Network in VirtualBox Global Tools.
